@@ -1,0 +1,107 @@
+@import url("https://fonts.google.com/specimen/Poppins");
+* {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0 auto;
+    font-family: "Poppins", sans-serif;
+}
+
+span{
+    max-width: 75%;
+    font-weight: 500;
+    font-size: 3rem;
+    word-wrap: break-all;
+    word-spacing: 5px;
+    overflow-wrap: break-word;
+    color: #1b1a1a;
+}
+
+.container {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.header h1 {
+    font-weight: bold;
+    font-size: 5rem;
+    color: #404040;
+    margin-bottom: 0;
+}
+
+.header p {
+    font-size: 2rem;
+    color: #101010;
+    margin-top: 0;
+}
+
+input {
+    padding: 1rem;
+    background-color: #fefefe;
+    border-radius: 8px;
+    color: #404040;
+    font-weight: bolder;
+    font-size: 1rem;
+    width: 75%;
+}
+
+input:focus{
+    outline: none;
+}
+
+.search {
+    margin: 5rem 0;
+}
+
+.main {
+    margin: 5rem 0;
+}
+
+.user-card {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+.data h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.2rem;
+}
+
+.data span {
+    color: #404040;
+    font-weight: bolder;
+}
+
+.data p {
+    margin: 2rem;
+    font-size: 1.25rem;
+}
+
+.image-container {
+    padding: 1rem;
+}
+
+.image-container img {
+    height: 256px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 200px;
+}
