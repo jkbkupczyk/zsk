@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 4</title>
+
+    <style>
+        body {
+            margin: 0 auto;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            text-align: center;
+        }
+
+        button {
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 1.25rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <h1>Kafelkowanie Łazienki</h1>
+
+        Powierzchnia w m2:<input type="number" name="" id="" min="1" step="0.01" value="1">
+
+        <br><br>
+
+        <input type="radio" name="plytki" id="" class="big" checked>Płytki 20 x 20 cm
+        <br>
+        <input type="radio" name="plytki" id="" class="small">Płytki 25 x 12 cm
+
+        <br><br>
+
+        <button>Przelicz</button>
+
+        <p class="para"></p>
+    </div>
+
+
+    <script>
+        document.querySelector("button").addEventListener("click", () => {
+            const paraElem = document.querySelector(".para");
+            const areaElem = document.querySelector("input[type=number]");
+            const tileType = document.querySelector(".big");
+
+            paraElem.innerHTML = tileType.checked ? `Koszt kafelkowania ${areaElem.value * 70}`: `Koszt kafelkowania ${areaElem.value * 80}`;
+        })
+    </script>
+
+</body>
+
+</html>

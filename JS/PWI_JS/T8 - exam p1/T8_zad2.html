@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 2</title>
+
+    <style>
+        body {
+            margin: 0 auto;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <h2>Oblicz koszt dostawy</h2>
+
+        <input type="checkbox" name="" id="shipment"> Jestem z Zielonej Góry
+
+        <p>albo</p>
+
+        Podaj liczbę kilometrów od Zielonej Góry: <input type="number" name="" id="dist">
+        <br><br>
+
+        <p class="price"></p>
+
+        <button>OBLICZ</button>
+    </div>
+
+    <script>
+        document.querySelector("button").addEventListener("click", () => {
+            const freeShipment = document.querySelector("#shipment");
+            const price = document.querySelector(".price");
+            const distance = document.querySelector("#dist");
+
+            price.innerHTML = freeShipment.checked ? "Dowieziemy twoją pizze za darmo!" :
+                `Dowóz będzie Cię kosztował ${(distance.value * 1) * 2} złotych`;
+        })
+    </script>
+</body>
+
+</html>

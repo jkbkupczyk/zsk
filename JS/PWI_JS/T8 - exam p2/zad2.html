@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 2</title>
+
+    <style>
+        body,
+        .cennik {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            text-align: center;
+        }
+
+        table,
+        tr,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <div class="cennik">
+            <table>
+                <tr>
+                    <th>Usługa</th>
+                    <th>Cena</th>
+                </tr>
+                <tr>
+                    <td>Piling</td>
+                    <td>45</td>
+                </tr>
+                <tr>
+                    <td>Maska</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Masaż</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>Regulacja brwi</td>
+                    <td>5</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="formik">
+            Piling<input type="checkbox" name="" id="piling"><br>
+            Maska<input type="checkbox" name="" id="maska"><br>
+            Masaż<input type="checkbox" name="" id="masaz"><br>
+            Regulacja brwi<input type="checkbox" name="" id="brwi"><br><br>
+
+            <button id="total-bttn">Oblicz cene zabiegów</button>
+        </div>
+
+        <div class="data"></div>
+    </section>
+
+    <script>
+        document.querySelector("#total-bttn").addEventListener("click", () => {
+
+            const cennik = {
+                'piling': 45,
+                'maska': 30,
+                'masaz': 20,
+                'brwi': 5
+            };
+
+            let total = 0;
+
+            document.querySelectorAll("input[type=checkbox]").forEach(elem => {
+                elem.checked ? total += cennik[elem.id] : total += 0;
+            })
+
+            document.querySelector(".data").innerHTML = `Całkowita cena: <strong>${total}</strong>`;
+        });
+    </script>
+</body>
+
+</html>

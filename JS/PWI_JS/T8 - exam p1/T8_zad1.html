@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 2</title>
+
+    <style>
+        body {
+            margin: 0 auto;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .para {
+            font-size: 3.5rem;
+        }
+
+        .red-bttn {
+            background-color: red;
+        }
+
+        .green-bttn {
+            background-color: green;
+        }
+
+        .blue-bttn {
+            background-color: blue;
+            color: yellow;
+        }
+
+        button {
+            width: 10rem;
+            height: 2.5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <p class="para">To jest przykład paragrafu</p>
+
+        <input type="text" class="size">
+        <br><br>
+        <select name="" id="" class="font-type">
+            <option value="normal" selected>Prosty</option>
+            <option value="italic">Kursywa</option>
+        </select>
+        <br><br>
+        <button class="size-bttn">Zmień styl paragrafu</button>
+
+        <br><br>
+
+        <button class="red-bttn bttn" value="red">CZERWONY</button>
+        <button class="green-bttn bttn" value="green">ZIELONY</button>
+        <button class="blue-bttn bttn" value="blue">NIEBIESKI</button>
+    </div>
+
+
+    <script>
+        const para = document.querySelector(".para");
+
+        const changeFont = () => {
+            para.style.fontSize = `${document.querySelector(".size").value}%`;
+            para.style.fontStyle = `${document.querySelector(".font-type").value}`;
+        }
+
+        document.querySelector(".size-bttn").addEventListener("click", () => {
+            changeFont();
+        })
+
+        document.querySelectorAll(".bttn").forEach(bttnElem => {
+            bttnElem.addEventListener("click", () => {
+                para.style.color = bttnElem.value;
+                changeFont();
+            })
+        })
+    </script>
+</body>
+
+</html>

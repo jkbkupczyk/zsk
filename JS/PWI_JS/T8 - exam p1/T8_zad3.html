@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 3</title>
+
+    <style>
+        body {
+            margin: 0 auto;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            text-align: center;
+        }
+
+        button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 2rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <h2>Policz koszt ogłoszenia</h2>
+
+        <h5>Liczba ogłoszeń</h5>
+        <input type="number" name="" id="" min="1" step="1" value="1">
+
+        <br><br>
+
+        <input type="checkbox" name="" id="">Jestem stałym klientem
+
+        <br><br>
+
+        <button>Kalkulacja</button>
+
+        <p class="para"></p>
+    </div>
+
+    <script>
+        document.querySelector("button").addEventListener("click", () => {
+            const shopPatron = document.querySelector("input[type=checkbox]");
+            const numberOfAds = document.querySelector("input[type=number]");
+            const paraElem = document.querySelector(".para");
+
+            let total = numberOfAds.value >= 1 && numberOfAds.value <= 40 ? 3 : 2;
+
+            paraElem.innerHTML = shopPatron ? `Twoje ogłoszenia będą kosztować: ${total - 0.30}PLN` :
+                `Twoje ogłoszenia będą kosztować: ${total}PLN`;
+        })
+    </script>
+
+</body>
+
+</html>

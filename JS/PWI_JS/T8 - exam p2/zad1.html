@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 1</title>
+
+    <style>
+        body {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <div>
+            <input type="text" name="" id="inp1" placeholder="Pierwszy wyraz">
+            <input type="text" name="" id="inp2" placeholder="Różnica ciągu R">
+            <input type="text" name="" id="inp3" placeholder="Liczba wyrazór ciągu">
+            <button id="generate-bttn">Generuj ciąg</button>
+        </div>
+
+        <div class="data"></div>
+    </section>
+
+    <script>
+        document.querySelector("#generate-bttn").addEventListener("click", () => {
+            const seqFirst = parseInt(document.querySelector("#inp1").value);
+            const seqDiff = parseInt(document.querySelector("#inp2").value);
+            const seqLength = parseInt(document.querySelector("#inp3").value);
+
+            let s = ``;
+            let seqNext = seqFirst;
+
+            // a(seqLength) = a(seqFirst) + (seqLength - 1) * seqDiff
+            // a(seqLength + 1) = a(seqLength) + seqDiff
+            for (let i = 0; i < seqLength; i++) {
+                s += `<${seqNext}> `;
+                seqNext += seqDiff;
+            }
+
+            document.querySelector(".data").innerHTML = `Ciąg arytmetyczny zawiera wyrazy: \n${s}`;
+        });
+    </script>
+</body>
+
+</html>

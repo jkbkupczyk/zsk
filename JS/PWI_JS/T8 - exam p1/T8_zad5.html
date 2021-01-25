@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 5</title>
+
+    <style>
+        body {
+            margin: 0 auto;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .form {
+            display: flex;
+            flex-flow: column wrap;
+            width: 200px;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            margin: 0 auto;
+        }
+
+        .color-bttn {
+            border: none;
+            padding: 2rem;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <h1>Skomponuj żelka</h1>
+
+        Podaj numer kształtu:
+        <input type="number" name="" id="num" min="1" max="3" step="1" value="1">
+
+        <br><br>
+
+        <div class="form">
+            skompnuj swój kolor, podaj RGB: <br>
+            R:<input type="number" name="" id="r" min="0" max="255">
+            G:<input type="number" name="" id="g" min="0" max="255">
+            B:<input type="number" name="" id="b" min="0" max="255">
+        </div>
+
+        <br><br>
+
+        <button class="order">Zamów</button>
+
+        <div>
+            <p class="para"></p>
+            <br>
+            <button class="color-bttn">Wybrany kolor</button>
+        </div>
+    </div>
+
+
+    <script>
+        document.querySelector(".order").addEventListener("click", () => {
+            const paragraph = document.querySelector(".para");
+            const colorBttn = document.querySelector(".color-bttn");
+            const jellyNumberCode = document.querySelector("#num");
+
+            const jellyTypes = {
+                1: "miś",
+                2: "żabka",
+                3: "serce"
+            };
+
+            const R = document.querySelector("#r").value;
+            const G = document.querySelector("#g").value;
+            const B = document.querySelector("#b").value;
+
+            paragraph.innerHTML =
+                `Wybrany kształ: <strong>${jellyTypes[jellyNumberCode.value] ? jellyTypes[jellyNumberCode.value] : "Błędny number"}</strong>`;
+            colorBttn.style.backgroundColor = `rgb(${R}, ${G}, ${B})`;
+        })
+    </script>
+
+</body>
+
+</html>

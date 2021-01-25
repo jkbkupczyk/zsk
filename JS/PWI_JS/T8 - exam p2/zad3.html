@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 3</title>
+
+    <style>
+        body {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <div>
+            <h2>Ile litrów zatankować</h2>
+
+            <label for="len">Dystans do przejechania w km</label>
+            <input type="number" name="" id="len" min="1">
+
+            <br>
+
+            <label for="consumption">Spalanie samochodu w l/100km</label>
+            <input type="number" name="" id="consumption" min="0.01">
+        </div>
+
+        <div>
+
+            <button id="total-bttn">OBLICZ</button>
+        </div>
+
+        <div class="data"></div>
+    </section>
+
+    <script>
+        document.querySelector("#total-bttn").addEventListener("click", () => {
+
+            const len = document.querySelector("#len").value;
+            const consumption = document.querySelector("#consumption").value;
+
+            document.querySelector(".data").innerHTML =
+                `Potrzebujesz <strong>${len / consumption}</strong> litrów paliwa.`;
+        });
+    </script>
+</body>
+
+</html>
