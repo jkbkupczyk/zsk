@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ćwiczenie 4</title>
+
+    <style>
+        body {
+            background-color: aliceblue;
+            margin: 0 auto;
+            height: 100%;
+        }
+
+        .wrapper {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            background-color: darkgreen;
+        }
+
+        .wrapper div {
+            text-align: center;
+            background-color: aquamarine;
+            padding: 12px 3rem;
+            border: 1px solid black;
+            margin: 5px;
+            width: 50px;
+        }
+
+        .clickedPosition {
+            flex-direction: row;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div>
+            <a href="#">Link1</a>
+        </div>
+
+        <div>
+            <a href="#">Link2</a>
+        </div>
+
+        <div>
+            <a href="#">Link3</a>
+        </div>
+    </div>
+
+    <button id="bttn--position">Zmień położenie</button>
+    <button class="bttn--color">Zmień kolor</button>
+
+    <script>
+        // A
+        const bttnPositionElem = document.querySelector("#bttn--position");
+        const bttnColorElem = document.querySelector("button:nth-of-type(2)");
+
+        bttnPositionElem.addEventListener('click', () => {
+            document.querySelector(".wrapper").classList.toggle("clickedPosition");
+        })
+
+        bttnColorElem.addEventListener('click', () => {
+            document.querySelectorAll(".wrapper div").forEach(divElem => {
+                divElem.style.backgroundColor = divElem.style.backgroundColor == 'aquamarine' ?
+                    'yellow' : 'aquamarine';
+            })
+        })
+    </script>
+</body>
+
+</html>

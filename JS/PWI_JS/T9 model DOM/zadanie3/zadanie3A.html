@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ćwiczenie 3</title>
+
+    <style>
+        body {
+            background-color: aliceblue;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        section {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        div {
+            margin: 10% 0.25rem;
+            border: 1px solid black;
+            width: 5rem;
+            height: 5rem;
+        }
+
+        .red {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>A</h1>
+    <section class="squares">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+
+    <script>
+        // A
+        let divElems = document.querySelectorAll(".squares div");
+
+        divElems.forEach(elem => {
+            elem.addEventListener("click", () => {
+                elem.classList.toggle("red");
+            })
+        })
+    </script>
+</body>
+
+</html>

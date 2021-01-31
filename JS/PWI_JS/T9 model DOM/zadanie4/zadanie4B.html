@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 4</title>
+
+    <style>
+        .toggle-parity {
+            text-align: center;
+        }
+
+        .toggle-non-parity {
+            text-align: right;
+            background-color: aliceblue;
+            color: brown;
+        }
+
+        .toggle-n3 {
+            background-color: black;
+            color: gold;
+        }
+
+        .toggle-last {
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            background-color: aqua;
+            color: crimson;
+        }
+        button{
+            height: 3rem;
+            margin: 1rem 25%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="para">
+        <p class="non-parity n3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex numquam beatae quibusdam,
+            blanditiis dolores
+            dolorem voluptatem sit praesentium molestias accusantium eum cum, officiis quasi reprehenderit dolore,
+            necessitatibus voluptates. </p>
+        <p class="parity n3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex numquam beatae quibusdam,
+            blanditiis dolores
+            dolorem voluptatem sit praesentium molestias accusantium eum cum, officiis quasi reprehenderit dolore,
+            necessitatibus voluptates. </p>
+        <p class="non-parity n3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex numquam beatae quibusdam,
+            blanditiis dolores
+            dolorem voluptatem sit praesentium molestias accusantium eum cum, officiis quasi reprehenderit dolore,
+            necessitatibus voluptates. </p>
+        <p class="parity">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex numquam beatae quibusdam,
+            blanditiis dolores
+            dolorem voluptatem sit praesentium molestias accusantium eum cum, officiis quasi reprehenderit dolore,
+            necessitatibus voluptates. </p>
+        <p class="non-parity">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex numquam beatae quibusdam,
+            blanditiis dolores
+            dolorem voluptatem sit praesentium molestias accusantium eum cum, officiis quasi reprehenderit dolore,
+            necessitatibus voluptates. </p>
+        <p class="parity">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex numquam beatae quibusdam,
+            blanditiis dolores
+            dolorem voluptatem sit praesentium molestias accusantium eum cum, officiis quasi reprehenderit dolore,
+            necessitatibus voluptates. </p>
+    </div>
+
+    <button>Formatuj parzyste</button>
+    <button>Formatuj nieparzyste</button>
+    <button>Formatuj 3 pierwsze</button>
+    <button>Formatuj ostatni</button>
+
+    <script>
+        // B
+        const bttnsElem = document.getElementsByTagName("button");
+
+        bttnsElem[0].addEventListener("click", () => {
+            Array.from(document.getElementsByClassName("parity")).forEach(para => {
+                para.classList.toggle("toggle-parity");
+            })
+        });
+
+        bttnsElem[1].addEventListener("click", () => {
+            Array.from(document.getElementsByClassName("non-parity")).forEach(para => {
+                para.classList.toggle("toggle-non-parity");
+            })
+        });
+
+        bttnsElem[2].addEventListener("click", () => {
+            Array.from(document.getElementsByClassName("n3")).forEach(elem => {
+                elem.classList.toggle("toggle-n3");
+            })
+        });
+
+        bttnsElem[3].addEventListener("click", () => {
+            let parityElem =  document.getElementsByClassName("parity");
+
+            parityElem[parityElem.length - 1].classList.toggle("toggle-last");
+        });
+    </script>
+</body>
+
+</html>

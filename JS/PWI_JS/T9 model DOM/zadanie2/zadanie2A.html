@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ćwiczenie 2</title>
+
+    <style>
+        body {
+            margin: 0 auto;
+            background-color: aliceblue;
+            color: aliceblue;
+            display: flex;
+            flex-flow: column wrap;
+            text-align: center;
+        }
+        ul {
+            list-style-type: square;
+            color: black;
+        }
+        .hidden {
+            visibility: hidden;
+        }
+        button {
+            width: 50%;
+            height: 3rem;
+            margin: 1rem 25%;
+        }
+        div{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <ul>
+            <li><a href="#">Jeden</a></li>
+            <li><a href="#">Dwa</a></li>
+            <li><a href="#">Trzy</a></li>
+            <li><a href="#">Cztery</a></li>
+            <li><a href="#">Pięć</a></li>
+        </ul>
+    </div>
+
+    <button>Ukryj menu</button>
+
+    <script>
+        // A
+        const buttonElem = document.querySelector("button");
+
+        buttonElem.addEventListener("click", () => {
+            // A
+            document.querySelector("ul").classList.toggle("hidden");
+        })
+    </script>
+</body>
+
+</html>
