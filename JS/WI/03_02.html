@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03.02.2021</title>
+
+    <style>
+        body {
+            display: grid;
+            place-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Napisz skrypt, który wczyta liczę całkowitą większą od zera,
+         i wypisze liczbę wystąpień poszczególnych cyfr w rej liczbie. -->
+
+    <input type="text" class="inp">
+    <script>
+        const elem = document.querySelector(".inp");
+
+        elem.addEventListener("change", () => {
+            let charArr = {
+                '1': 0,
+                '2': 0,
+                '3': 0,
+                '4': 0,
+                '5': 0,
+                '6': 0,
+                '7': 0,
+                '8': 0,
+                '9': 0,
+                '0': 0
+            };
+
+            for (let char of elem.value) {
+                charArr[char] += 1;
+            }
+
+            console.table(charArr);
+        });
+    </script>
+</body>
+
+</html>
