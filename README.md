@@ -24,29 +24,31 @@
 
       [PHP_Theory](https://github.com/jkbkupczyk/zsk/tree/main/PHP/PHP_PWI)
          
-         [1_DB](https://github.com/jkbkupczyk/zsk/tree/main/PHP/PHP_PWI/1_Database) - DB exercices
+      [1_DB](https://github.com/jkbkupczyk/zsk/tree/main/PHP/PHP_PWI/1_Database) - DB exercices
+      
+      <br>
 
       [PHP](https://github.com/jkbkupczyk/zsk/tree/main/PHP/lectures) - PHP Lang Course practice
 
-         [1_vars](https://github.com/jkbkupczyk/zsk/tree/main/PHP/lectures/1_vars) - Basic stuff such as. variables, scope etc.
+      [1_vars](https://github.com/jkbkupczyk/zsk/tree/main/PHP/lectures/1_vars) - Basic stuff such as. variables, scope etc.
    
-         [2_operators](https://github.com/jkbkupczyk/zsk/tree/main/PHP/lectures/2_operators) - PHP: Operators
+      [2_operators](https://github.com/jkbkupczyk/zsk/tree/main/PHP/lectures/2_operators) - PHP: Operators
    
-         [3_require](https://github.com/jkbkupczyk/zsk/tree/main/PHP/lectures/3_require) - Include and require
+      [3_require](https://github.com/jkbkupczyk/zsk/tree/main/PHP/lectures/3_require) - Include and require
    
-         [4_string](https://github.com/jkbkupczyk/zsk/tree/main/PHP/lectures/4_string) - String manipulation
+      [4_string](https://github.com/jkbkupczyk/zsk/tree/main/PHP/lectures/4_string) - String manipulation
    
-         [5_form](https://github.com/jkbkupczyk/zsk/tree/main/PHP/lectures/5_form) - String form validation
+      [5_form](https://github.com/jkbkupczyk/zsk/tree/main/PHP/lectures/5_form) - String form validation
    
-         [6_fromV2](https://github.com/jkbkupczyk/zsk/tree/main/PHP/lectures/6_form) - String form validation part 2
+      [6_fromV2](https://github.com/jkbkupczyk/zsk/tree/main/PHP/lectures/6_form) - String form validation part 2
    
-         [7_function](https://github.com/jkbkupczyk/zsk/tree/main/PHP/lectures/7_function) - PHP: Function definition
+      [7_function](https://github.com/jkbkupczyk/zsk/tree/main/PHP/lectures/7_function) - PHP: Function definition
    
-         [8_calc](https://github.com/jkbkupczyk/zsk/tree/main/PHP/lectures/8_calc) - Small calculator project
+      [8_calc](https://github.com/jkbkupczyk/zsk/tree/main/PHP/lectures/8_calc) - Small calculator project
    
-         [9_date](https://github.com/jkbkupczyk/zsk/tree/main/PHP/lectures/9_date) - PHP: Date object
+      [9_date](https://github.com/jkbkupczyk/zsk/tree/main/PHP/lectures/9_date) - PHP: Date object
    
-         [10_project](https://github.com/jkbkupczyk/zsk/tree/main/PHP/lectures/10_project) - Project
+      [10_project](https://github.com/jkbkupczyk/zsk/tree/main/PHP/lectures/10_project) - Project
 
-         [11_arrays](https://github.com/jkbkupczyk/zsk/tree/main/PHP/lectures/11_arrays) - Arrays
+      [11_arrays](https://github.com/jkbkupczyk/zsk/tree/main/PHP/lectures/11_arrays) - Arrays
    
