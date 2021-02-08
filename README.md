@@ -16,7 +16,10 @@
    
    [Mobile App Dev](https://github.com/jkbkupczyk/zsk/tree/main/JS/MobileApps) - ES6 stuff
    
+   [PWI_JS](https://github.com/jkbkupczyk/zsk/tree/main/JS/PWI_JS) - DOM manipulation
 
+   [WI](https://github.com/jkbkupczyk/zsk/tree/main/JS/WI) - Pure JS Stuff
+   
 3. [PHP](https://github.com/jkbkupczyk/zsk/tree/main/PHP/lectures) - PHP Lang Course 
 
    [1_vars](https://github.com/jkbkupczyk/zsk/tree/main/PHP/lectures/1_vars) - Basic stuff such as. variables, scope etc.
@@ -38,4 +41,6 @@
    [9_date](https://github.com/jkbkupczyk/zsk/tree/main/PHP/lectures/9_date) - PHP: Date object
    
    [10_project](https://github.com/jkbkupczyk/zsk/tree/main/PHP/lectures/10_project) - Project
+
+   [11_arrays](https://github.com/jkbkupczyk/zsk/tree/main/PHP/lectures/11_arrays) - Arrays
    
