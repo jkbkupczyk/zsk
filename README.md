@@ -9,6 +9,8 @@
    [Half](https://github.com/jkbkupczyk/zsk/blob/main/IT/CS/Half/Half.cpp) - Root finding method
    
    [SquareRoot](https://github.com/jkbkupczyk/zsk/blob/main/IT/CS/SquareRoot/SquareRoot.cpp) - Square root function
+   
+---
 
 2. [JS](https://github.com/jkbkupczyk/zsk/tree/main/JS) - Web dev
 
@@ -20,9 +22,13 @@
 
    [WI](https://github.com/jkbkupczyk/zsk/tree/main/JS/WI) - Pure JS Stuff
    
+---
+   
 3. [PHP Lang Course](https://github.com/jkbkupczyk/zsk/tree/main/PHP/PHP_PWI) - PHP Lang course theory
 
    [1_DB](https://github.com/jkbkupczyk/zsk/tree/main/PHP/PHP_PWI/1_Database) - DB exercices
+   
+---
 
 4. [PHP_Practice](https://github.com/jkbkupczyk/zsk/tree/main/PHP/lectures) - PHP Lang Course practice
 
@@ -48,3 +54,4 @@
 
    [11_arrays](https://github.com/jkbkupczyk/zsk/tree/main/PHP/lectures/11_arrays) - Arrays
    
+   ---
