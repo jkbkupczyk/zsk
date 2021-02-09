@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta namev="iewport" content="width=device-width, initial-scale=1.0">
+    <title>Jakub Kupczyk</title>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.15.2/js/all.js"></script>
+    <style>
+        :root {
+            --dark: #1d1d1d;
+            --light: #efefef;
+        }
+
+        body {
+            margin: 0 auto;
+        }
+
+        button {
+            width: auto;
+            padding: 1rem;
+            font-size: 1rem;
+            outline: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: larger;
+            font-weight: bolder;
+            border-radius: 5px;
+        }
+
+        nav {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: flex-start;
+            text-align: center;
+            padding: 0.5rem;
+            margin: 0.5rem;
+        }
+
+        section {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            ;
+            font-size: 10em;
+        }
+
+        .darkModeOn {
+            background-color: var(--dark);
+            color: var(--light);
+        }
+
+        .darkModeOff {
+            background-color: var(--light);
+            color: var(--dark);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h1>Dark mode OFF</h1>
+        <button value="off">Turn ON</button>
+    </nav>
+
+    <section>
+        <i class="far fa-lightbulb"></i>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
