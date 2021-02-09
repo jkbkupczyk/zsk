@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta namev="iewport" content="width=device-width, initial-scale=1.0">
+    <title>Jakub Kupczyk</title>
+
+    <style>
+        body {
+            padding: 10%;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+
+        img {
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .buttons{
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        .button {
+            padding: 1rem;
+            margin: 1rem;
+            background-color: grey;
+        }
+
+        p {
+            font-size: larger;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <img src="https://cdn2.thecatapi.com/images/as1.jpg" width="400" height="400">
+        <p>Kotek i ściana</p>
+        <div class="buttons">
+            
+        </div>
+    </section>
+
+    <script>
+        const catsData = [{
+                src: "https://cdn2.thecatapi.com/images/as1.jpg",
+                text: "Kotek i ściana"
+            },
+            {
+                src: "https://cdn2.thecatapi.com/images/as2.jpg",
+                text: "Kotek"
+            },
+            {
+                src: "https://cdn2.thecatapi.com/images/as3.jpg",
+                text: "Przeciągający się kotek"
+            },
+            {
+                src: "https://cdn2.thecatapi.com/images/as7.jpg",
+                text: "Kotek w krawacie"
+            },
+            {
+                src: "https://cdn2.thecatapi.com/images/as9.jpg",
+                text: "Bardzo mały kotek"
+            },
+        ];
+
+        const buttons = document.querySelectorAll(".button");
+        const para = document.querySelector("p");
+        const imgElem = document.querySelector("img");
+
+        // Generate buttons
+        const a = (() => {
+            for (let i = 0; i < catsData.length; i++) {
+                document.querySelector(".buttons").innerHTML += `<button class="button" value="${i}" onclick="nextImage(this.value)">${i + 1}</button>`;
+            }
+        })();
+
+        const nextImage = (value) => {
+            imgElem.setAttribute("src", catsData[value].src);
+            para.textContent = catsData[value].text;
+        };
+    </script>
+</body>
+
+</html>

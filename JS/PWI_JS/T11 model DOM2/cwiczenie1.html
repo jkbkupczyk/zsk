@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta namev="iewport" content="width=device-width, initial-scale=1.0">
+    <title>Jakub Kupczyk</title>
+
+    <style>
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        section:nth-of-type(1) {
+            flex-direction: column;
+        }
+
+        div {
+            border: 1px solid black;
+            justify-content: center;
+            text-align: center;
+            padding: 5rem;
+        }
+
+        img {
+            margin: 2.5rem;
+        }
+
+        .divToggle {
+            width: 50%;
+            background-color: crimson;
+            color: whitesmoke;
+            font-size: larger;
+            font-weight: bolder;
+        }
+
+        button {
+            margin: 1rem;
+            padding: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <div></div>
+        <img src="https://randomuser.me/api/portraits/lego/0.jpg">
+        <a href="https://www.zsk.poznan.pl/">ZSK</a>
+    </section>
+
+    <section>
+        <button>Zmień div'a</button>
+        <button>Zmień obrazek</button>
+        <button>zmien href'a</button>
+    </section>
+
+    <script>
+        document.querySelector("button:nth-of-type(1)").addEventListener('click', () => {
+            const divElem = document.querySelector("div");
+
+            if (divElem.hasAttribute("class")) {
+                divElem.removeAttribute("class");
+                divElem.textContent = "";
+            } else {
+                divElem.setAttribute("class", "divToggle");
+                divElem.textContent = "DIV";
+            }
+        });
+
+        document.querySelector("button:nth-of-type(2)").addEventListener('click', () => {
+            const imgElem = document.querySelector("img");
+
+            if (imgElem.hasAttribute("width") && imgElem.hasAttribute("height")) {
+                imgElem.removeAttribute("width");
+                imgElem.removeAttribute("height");
+            } else {
+                imgElem.setAttribute("width", 225);
+                imgElem.setAttribute("height", 225);
+            }
+        });
+
+        document.querySelector("button:nth-of-type(3)").addEventListener('click', () => {
+            const linkElem = document.querySelector("a");
+
+            if(linkElem.textContent == "ZSK") {
+                linkElem.setAttribute("href", "https://pl.wikipedia.org/wiki/Wikipedia:Strona_g%C5%82%C3%B3wna");
+                linkElem.textContent = "Strona główna Wikipedi";
+            }else {
+                linkElem.setAttribute("href", "https://www.zsk.poznan.pl/");
+                linkElem.textContent = "ZSK";
+            }
+        });
+    </script>
+</body>
+
+</html>

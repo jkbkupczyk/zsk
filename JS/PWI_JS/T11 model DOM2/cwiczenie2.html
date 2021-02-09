@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta namev="iewport" content="width=device-width, initial-scale=1.0">
+    <title>Jakub Kupczyk</title>
+
+    <style>
+        section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        div{
+            border: 2px solid black;
+            padding: 5rem;
+        }
+
+        button {
+            margin: 1rem;
+            padding: 1rem;
+        }
+
+        img {
+            padding: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <div>
+            <img src="https://randomuser.me/api/portraits/lego/6.jpg">
+        </div>
+
+        <button>Kliknij mnie</button>
+        <button>Kliknij mnie też</button>
+    </section>
+
+    <script>
+        const button1 = document.querySelector("button:nth-of-type(1)");
+        const button2 = document.querySelector("button:nth-of-type(2)");
+        const imgElem = document.querySelector("img");
+
+        button1.addEventListener('click', () => {
+            imgElem.src = "https://randomuser.me/api/portraits/lego/7.jpg";
+            imgElem.style.border = "3px dashed crimson";
+            imgElem.alt = "Sombrero";
+
+            button1.textContent = "Nie klikaj mnie!";
+            button2.textContent = "Kliknij mnie też";
+        });
+
+        button2.addEventListener('click', () => {
+            imgElem.setAttribute("src", "https://randomuser.me/api/portraits/lego/9.jpg");
+            imgElem.setAttribute("style", "border: 3px solid lightblue");
+
+            button2.textContent = "Ups...";
+            button1.textContent = "Kliknij mnie";
+        });
+    </script>
+</body>
+
+</html>
