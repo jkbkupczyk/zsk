@@ -1,0 +1,35 @@
+body {
+    font-family: Garamond;
+    margin: 0 auto;
+}
+
+nav, footer {
+    background-color: #3cb371;
+    color: white;
+    padding: 10px;
+    font-size: 130%;
+    text-align: center;
+}
+
+section {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.lewy {
+    background-color: #faebd7;
+    width: 55%;
+    height: 450px;
+}
+
+.prawy {
+    background-color: #faebd7;
+    width: 45%;
+    height: 450px;
+}
+
+img {
+    padding: 3px;
+    margin: 15px;
+    border: 2px dashed #3cb371;
+}

@@ -1,0 +1,9 @@
+SELECT r.id, r.nazwa, r.wystepowanie FROM Ryby r WHERE r.styl_zycia = 2
+SELECT l.akwen, l.wojewodztwo FROM lowisko l WHERE l.rodzaj = 2 OR l.rodzaj = 3
+SELECT r.nazwa FROM Ryby r INNER JOIN okres_ochronny ok ON r.id = ok.Ryby_id WHERE ok.wymiar_ochronny = 0
+CREATE TABLE wedkarze (
+    id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT PRIMAMRY KEY,
+    imie TEXT,
+    nazwisko TEXT,
+    punkty INTEGER
+);
