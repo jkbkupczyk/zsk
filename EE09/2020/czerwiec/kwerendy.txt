@@ -1,0 +1,4 @@
+SELECT dataZadania, miesiac, wpis FROM zadania WHERE miesiac LIKE 'sierpien';
+SELECT miesiac, rok FROM zadania WHERE dataZadania = '2020-08-01';
+SELECT DISTINCT wpis FROM zadania WHERE wpis LIKE '%o';
+UPDATE zadania SET wpis = 'Wycieczka: Karkonosze' WHERE dataZadania = '2020-08-27';
