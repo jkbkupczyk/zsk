@@ -1,0 +1,8 @@
+SELECT m.id, m.nazwisko FROM matematycy m WHERE m.rok_urodzenia > 1700;
+SELECT m.id, m.nazwisko FROM matematycy m WHERE m.liczba_publikacji BETWEEN 11 AND 30;
+SELECT SUM(m.liczba_publikacji) as Liczba FROM matematycy m WHERE m.rok_urodzenia > 1750;
+CREATE TABLE publikacje(
+	id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    tytul TEXT,
+    rok INTEGER
+);

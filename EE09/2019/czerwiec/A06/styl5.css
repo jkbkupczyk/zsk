@@ -1,0 +1,50 @@
+body {
+    font-family: Tahoma;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.lewy, .prawy {
+    background-color: rosybrown;
+    color: white;
+    width: 30%;
+    height: 200px;
+}
+
+.srodkowy {
+    background-color: rosybrown;
+    color: white;
+    width: 40%;
+    height: 200px;
+    text-align: center;
+}
+
+main {
+    background-color: wheat;
+    padding: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+footer {
+    background-color: rosybrown;
+    color: white;
+    padding: 5px;
+    text-align: center;
+}
+
+a {
+    border: 2px solid darkred;
+    background-color: salmon;
+    color: darkred;
+    padding: 20px;
+    line-height: 200px;
+}
