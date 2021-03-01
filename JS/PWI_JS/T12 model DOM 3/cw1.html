@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jakub Kupczyk cw1</title>
+
+    <style>
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        button {
+            width: 7rem;
+            padding: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <div></div>
+        <button>Dodaj obrazek</button>
+    </main>
+
+    <script>
+        const divElem = document.querySelector("div");
+
+        const links = [{
+                text: 'wikipedia',
+                path: 'https://pl.wikipedia.org'
+            },
+            {
+                text: 'randomowe zdjecie',
+                path: 'https://source.unsplash.com/random'
+            },
+            {
+                text: 'kot',
+                path: 'https://source.unsplash.com/random/cat'
+            }
+        ];
+
+        const addElem = () => {
+            if (divElem.hasChildNodes()) {
+                return;
+            }
+
+            const headerElem = document.createElement("h1");
+            headerElem.innerText = "Polecane strony";
+
+            const imgElem = document.createElement("img");
+            imgElem.src = "https://source.unsplash.com/random/400x400";
+
+            links.map(elem => {
+                const linkElem = document.createElement("a");
+                linkElem.href = elem.path;
+                linkElem.innerText = elem.text;
+                linkElem.target = '_blank';
+                divElem.appendChild(linkElem);
+            });
+
+            divElem.appendChild(headerElem);
+            divElem.appendChild(imgElem);
+        }
+
+        document.querySelector("button").addEventListener('click', addElem);
+    </script>
+</body>
+
+</html>

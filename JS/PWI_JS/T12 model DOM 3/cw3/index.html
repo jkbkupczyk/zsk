@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jakub Kupczyk cw3</title>
+
+    <style>
+        .main__tab {
+            font-size: larger;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .row {
+            display: flex;
+            flex-flow: row nowrap;
+            text-align: center;
+        }
+
+        .row div {
+            padding: 20px;
+            border: 1px solid black;
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <header>
+            <h1>Tabliczka mnożenia</h1>
+        </header>
+
+        <section>
+            Podaj liczbę początkową:
+            <input type="text" name="" id="inp1" required>
+
+            Podaj liczbę końcową:
+            <input type="text" name="" id="inp2" required>
+
+            <button>Utwórz</button>
+        </section>
+
+        <section class="main__tab"></section>
+    </main>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>

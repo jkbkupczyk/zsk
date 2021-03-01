@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jakub Kupczyk cw2</title>
+
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            margin: 2rem;
+            border-radius: 5px;
+            box-shadow: 1px 1px 1px 1px #999;
+            background-color: #673AB7;
+            color: #FAFAFA;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        input {
+            background-color: #FAFAFA;
+            border: none;
+            outline: none;
+            cursor: text;
+            padding: 0.75rem 1.5rem;
+            border-radius: 10px;
+            width: 45vw;
+        }
+
+        ul {
+            margin: 0;
+        }
+
+        ul li {
+            list-style-type: none;
+        }
+
+        ::placeholder {
+            color: #673AB7;
+        }
+
+        header h1 {
+            text-transform: uppercase;
+            margin: 2rem;
+        }
+
+        .form__bttn--add {
+            color: #673AB7;
+            padding: 0.75rem 1.5rem;
+            margin: 0 2rem;
+            border-radius: 15px;
+            outline: none;
+            border: 1px solid #673AB7;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .form__bttn--add:hover {
+            background-color: #673AB7;
+            border-color: #FAFAFA;
+            color: #FAFAFA;
+            transition: all 500ms;
+        }
+
+        .list {
+            background-color: #FAFAFA;
+            width: 100%;
+            margin: 1rem 0 0 0;
+        }
+
+        .todo__elem {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            background-color: #ECEFF1;
+            margin: 1rem;
+        }
+
+        .todo__elem--text {
+            color: rgb(29, 27, 27);
+            font-weight: 500;
+            justify-content: flex-start;
+            text-align: left;
+        }
+
+        .todo__elem--delete {
+            color: #FF9800;
+            padding: 0.75rem 1.5rem;
+            border-radius: 2px;
+            outline: none;
+            border: 1px solid #FF9800;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: 600;
+            justify-content: flex-end;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <header>
+            <h1>Lista zadań</h1>
+        </header>
+
+        <section>
+            <input type="text" name="addTodo" id="addTodo" placeholder="Wpisz treść zadania">
+            <button class="form__bttn--add">Dodaj</button>
+        </section>
+
+        <section class="list"></section>
+    </main>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
