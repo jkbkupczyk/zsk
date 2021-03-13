@@ -54,4 +54,6 @@
 
    [11_arrays](https://github.com/jkbkupczyk/zsk/tree/main/PHP/lectures/11_arrays) - Arrays
    
+   [12_db](https://github.com/jkbkupczyk/zsk/tree/main/PHP/lectures/12_db) - Databases in PHP - Connection and queries
+   
    ---
